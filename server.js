@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 // app.get('/destination', handler.fetchTodos)
 app.post('/destination', handler.addDestination);
 
-// app.post('/destination/todo', handler.addTodo);
+app.post('/destination/todo', handler.addTodo);
 
 app.listen(3000, function() {
   console.log('Listening on port 3000');
