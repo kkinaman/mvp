@@ -1,0 +1,23 @@
+#navbar {
+  float: right;
+}
+
+.jumbotron {
+  margin-top: 50px;
+  text-align: center;
+  height: 400px;
+  background-image: url('https://wallpaperscraft.com/image/new_york_buildings_sky_view_from_above_skyscrapers_38247_2560x1600.jpg');
+  background-size: cover;
+  background-position: center 20%;
+}
+
+.jumbotron h1 {
+  padding-top: 120px;
+  color: #ddd;
+}
+
+.searchForm {
+  margin: 40px auto;
+  width: 500px;
+  text-align: center;
+}
