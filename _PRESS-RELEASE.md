@@ -23,25 +23,19 @@ Once the project moves into development, the press release can be used as a touc
 ## Are we there yet? provides a clean platform for saving travel plans ahead of time. Browse related photos of your destination, create an itinerary, and spend more time seeing the sights with your travel plans conveniently saved on the web.  ##
 
 ## Problem ##
-  > Describe the problem your product solves.
   > Traveling should be about seeing and experiencing a new environment and culture, not sifting through pamphlets and guides.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
   > Are we there yet? makes planning your travels fun and simple.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
   > "Gone are the days of Lonely Planet guide books, post-its, and folders of print-outs. With our technology you have all your ideas and plans at your tips. "
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
   > Create an account, plug in your destination, and start planning!
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
   > "Planning our next family vacation usually gives me a headache, trying to keep track of everything we want to do. Now, all our plans are available at our fingertips with the Are we there yet? app."
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
   > Been thinking about a vacation? Visit our website and start browsing. We're sure you'll find inspiraton.
