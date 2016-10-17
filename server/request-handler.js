@@ -1,4 +1,4 @@
-var db = require('db-config');
+var db = require('./db-config');
 
 var User = db.userModel;
 var DestinationTodo = db.destinationTodoModel;
@@ -13,7 +13,9 @@ exports.fetchTodos = function(req, res) {
 }
 
 exports.addDestination = function(req, res) {
-  //adds destination to db
+  DestinationTodo.create({name: req.body.name}, function(err, dest) {
+    res.status(201).send(dest);
+  });
 };
 
 exports.addTodo = function(req, res) {
