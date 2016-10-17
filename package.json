@@ -19,6 +19,7 @@
   "homepage": "https://github.com/kkinaman/2016-09-mvp#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "mongoose": "^4.6.4",
     "nodemon": "^1.11.0"
   }
 }
