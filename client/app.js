@@ -14,4 +14,16 @@ angular.module('travelPlannerApp', [
       templateUrl: 'itineraries/itinerary.html',
       controller: 'ItineraryController'
     });
+})
+
+.factory('newDestinationFactory', function() {
+  var destination = '';
+  return {
+    getDest: function() {
+      return destination;
+    },
+    setDest: function(dest) {
+      destination = dest;
+    }
+  }
 });
