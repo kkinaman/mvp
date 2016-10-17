@@ -1,14 +1,12 @@
-angular.module('travelPlannerApp', ['ngRoute'])
+angular.module('travelPlannerApp', [
+  'travelPlannerApp.search',
+  'ngRoute'
+  ])
 
 .config(function($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'index.html',
+      templateUrl: 'searchPage/searchPage.html',
       controller: 'SearchPageController'
     });
-})
-.controller('SearchPageController', function($scope) {
-  $scope.setDestination = function() {
-    console.log($scope.destination);
-  }
 });
