@@ -1,5 +1,6 @@
 angular.module('travelPlannerApp', [
   'travelPlannerApp.search',
+  'travelPlannerApp.itinerary',
   'ngRoute'
   ])
 
@@ -8,5 +9,9 @@ angular.module('travelPlannerApp', [
     .when('/', {
       templateUrl: 'searchPage/searchPage.html',
       controller: 'SearchPageController'
+    })
+    .when('/destination', {
+      templateUrl: 'itineraries/itinerary.html',
+      controller: 'ItineraryController'
     });
 });

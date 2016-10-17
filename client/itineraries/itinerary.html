@@ -1,9 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
+<div class='jumbotron itineraryJumbotron'>
+  <div class='container'>
+    <h1>{{destination}}</h1>
+  </div>
+</div>
 
-</body>
-</html>
+<div class='itineraryBody'>
+  <div class='container'>
+      <div class='itinerary col-md-5'>
+      <h2>When in {{destination}}...</h2>
+      <form class='itineraryForm' ng-submit='addItem()'>
+        <input type='text' class="form-control" name='item' type='text' ng-model='itineraryItem'/>
+        <button type='submit' class='addEventButton btn btn-default'>Add event</button>
+      </form>
+
+      <ul class="list-group checked-list-box">
+        <li class="list-group-item" ng-repeat='item in listItems'><input type="checkbox"/>{{item}}</li>
+      </ul>
+      </div>
+      <div class='col-md-5 col-md-offset-1'>
+      <h2>Images</h2>
+      </div>
+  </div>
+</div>

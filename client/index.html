@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='travelPlannerApp'>
 <head>
-  <title>Are we there yet?</title>
+  <title>Travel App</title>
   <link rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.min.css'/>
   <link rel='stylesheet' href='styles/styles.css'/>
 </head>
@@ -9,13 +9,13 @@
   <nav class='navbar navbar-default navbar-static-top navbar-inverse'>
     <div class='container-fluid'>
       <div class='navbar-header'>
-        <a class="navbar-brand" href="#">Are we there yet?</a>
+        <a class="navbar-brand" href="#/">App Name Here</a>
       </div>
       <ul id='navbar' class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li> 
-        <li><a href="#">Page 3</a></li> 
+        <li class="active"><a href="#/">Home</a></li>
+        <li><a href="#">My Places</a></li>
+        <li><a href="#">Log In</a></li> 
+        <li><a href="#">Sign Up</a></li> 
       </ul>
   </nav>
   <div ng-view></div>
@@ -25,6 +25,7 @@
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/angular-route/angular-route.min.js"></script>
 
+  <script src="itineraries/itineraryController.js"></script>
   <script src="searchPage/searchPageController.js"></script>
   <script src="app.js"></script>
 
