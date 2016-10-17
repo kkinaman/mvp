@@ -1,6 +1,6 @@
 angular.module('travelPlannerApp.search', [])
 
-.controller('SearchPageController', function($scope, newDestinationFactory) {
+.controller('SearchPageController', function($scope, $http, newDestinationFactory) {
 
   // function prettifyText(string) {
   //   return string.split(' ').map(function(word) {

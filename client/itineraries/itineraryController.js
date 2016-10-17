@@ -1,6 +1,6 @@
 angular.module('travelPlannerApp.itinerary', [])
 
-.controller('ItineraryController', function($scope, newDestinationFactory) {
+.controller('ItineraryController', function($scope, $http, newDestinationFactory) {
   $scope.destination = newDestinationFactory.getDest();
   $scope.listItems = [];
   $scope.addItem = function() {
