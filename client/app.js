@@ -18,6 +18,7 @@ angular.module('travelPlannerApp', [
 
 .factory('newDestinationFactory', function() {
   var destination = '';
+
   return {
     getDest: function() {
       return destination;
@@ -27,3 +28,9 @@ angular.module('travelPlannerApp', [
     }
   }
 });
+// .factory('_', function() {
+//   return window._; //Underscore should be loaded on the page
+// });
+
+
+  
