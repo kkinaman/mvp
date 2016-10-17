@@ -1,0 +1,18 @@
+{
+  "name": "mvp-travel-planner",
+  "description": "MVP project",
+  "main": "server.js",
+  "authors": [
+    "Karina Kinaman"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kkinaman/2016-09-mvp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
