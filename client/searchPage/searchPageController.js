@@ -2,20 +2,22 @@ angular.module('travelPlannerApp.search', [])
 
 .controller('SearchPageController', function($scope, $http, newDestinationFactory) {
 
-  // function prettifyText(string) {
-  //   return string.split(' ').map(function(word) {
-  //     return  _.capitalize(word);
-  //   }).join(' ');
-  // };
+  var capitalizeWords= function(string) {
+    if (string.split(' ')) {
+      return string.split(' ').map(function(word) {
+          var chars = word.toLowerCase().split('');
+          chars[0] = chars[0].toUpperCase();
+          return chars.join('');
+        }).join(' ');
+    }
+  };
 
   $scope.setDestination = function() {
-    newDestinationFactory.setDest($scope.destination);
-
-// TODO: fill these fields in
+    newDestinationFactory.setDest(capitalizeWords($scope.destination));
+// TODO: fill the creator field in
     var newDestination = {
       // creator: 'user',
-      name: $scope.destination
-      // todos: []
+      name: newDestinationFactory.getDest()
     };
     $http({
       method: 'POST',
@@ -24,6 +26,5 @@ angular.module('travelPlannerApp.search', [])
     }).then(function(resp) {
       return resp;
     });
-    // newDestinationFactory.setDest(prettifyText($scope.destination));
   }
 });
