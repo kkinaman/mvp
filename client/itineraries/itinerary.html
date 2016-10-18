@@ -14,7 +14,7 @@
       </form>
 
       <ul class="list-group checked-list-box">
-        <li class="list-group-item todoItem" id='todoListItem{{$index}}' ng-repeat='item in listItems'>
+        <li class="list-group-item todoItem" id='todoListItem{{$index}}' ng-repeat='item in listItems' ng-click='upvote(item)'>
           <input class='itemCheckbox' type="checkbox" ng-click='checkOffItem($index)'/>{{item.text}}
           <span class="badge">{{item.votes}}</span>
         </li>

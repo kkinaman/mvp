@@ -54,11 +54,26 @@ angular.module('travelPlannerApp.itinerary', [])
     $scope.itineraryItem = '';
   };
 
-  $scope.checkOffItem = function(number) {
-    var selector = '#todoListItem' + number;
+  $scope.checkOffItem = function(index) {
+    var selector = '#todoListItem' + index;
 
     angular.element(document.querySelector( selector )).css('background-color','#666');
     angular.element(document.querySelector( selector )).css('border-color','#666');
+  };
+
+  $scope.upvote = function(item) {
+    var updatedTodo = {
+      id: item._id,
+      votes: item.votes + 1
+    };
+    $http({
+      method: 'POST',
+      url: '/destination/todo/vote',
+      data: updatedTodo
+    }).then(function(resp) {
+      fetchTodos();
+      return resp;
+    });
   };
 
   $scope.submitQuery = function() {

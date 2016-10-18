@@ -71,8 +71,18 @@ exports.addTodo = function(req, res) {
           });
       }
     });
+};
 
-  
+//POST to /destination/todo/vote
+exports.updateVotes = function(req, res) {
+  Todo.findOneAndUpdate(
+    {_id: req.body.id}, 
+    {votes: req.body.votes},
+    {safe: true, upsert: true},
+    function(err, dest) {
+      res.status(201).send(dest);
+    }
+  );
 };
 
 
