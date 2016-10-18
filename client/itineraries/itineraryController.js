@@ -26,7 +26,10 @@ angular.module('travelPlannerApp.itinerary', [])
     $http({
       method: 'GET',
       url: '/destination/photos',
-      params: {dest: $scope.destination}
+      params: {
+        dest: $scope.destination,
+        query: 'attraction'
+      }
     }).then(function(resp) {
       $scope.photos = resp.data.map(function(image) {
         return image.display_sizes[0].uri;
@@ -58,5 +61,20 @@ angular.module('travelPlannerApp.itinerary', [])
     angular.element(document.querySelector( selector )).css('background-color','#666');
     angular.element(document.querySelector( selector )).css('border-color','#666');
   };
+
+  $scope.submitQuery = function() {
+    $http({
+      method: 'GET',
+      url: '/destination/photos',
+      params: {
+        dest: $scope.destination,
+        query: $scope.imagesQuery
+      }
+    }).then(function(resp) {
+      $scope.photos = resp.data.map(function(image) {
+        return image.display_sizes[0].uri;
+      })
+    });
+  }
   
 });

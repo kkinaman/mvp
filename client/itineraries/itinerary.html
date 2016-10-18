@@ -21,7 +21,7 @@
       </div>
       <div class='col-md-6 col-md-offset-1'>
         <h2>Search Related Images</h2>
-        <form class='searchImagesForm'>
+        <form class='searchImagesForm' ng-submit='submitQuery()'>
           <label for='imageQuery'>Search for {{destination}} and... </label><input type='text' name='imageQuery' ng-model='imagesQuery'/>
           <button type='submit' class='sendQueryButton'>Search</button>
         </form>

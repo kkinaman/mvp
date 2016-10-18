@@ -24,7 +24,7 @@ exports.fetchTodos = function(req, res) {
 
 //GET to /destination/photos
 exports.fetchImages = function(req, res) {
-  client.search().images().withPage(1).withPageSize(9).withPhrase(req.query.dest + ' attraction')
+  client.search().images().withPage(1).withPageSize(9).withPhrase(req.query.dest + ' ' + req.query.query)
       .execute(function(err, response) {
           if (err) {
             throw err;

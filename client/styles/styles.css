@@ -100,6 +100,7 @@ input[type='checkbox'] {
 }
 
 .searchImagesForm input {
+  color: #333;
   margin-left: 10px;
 }
 
