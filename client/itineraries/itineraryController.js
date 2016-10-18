@@ -52,9 +52,11 @@ angular.module('travelPlannerApp.itinerary', [])
     $scope.itineraryItem = '';
   };
 
-  $scope.checkOffItem = function(something) {
-    angular.element(document.querySelector( '#todoListItem' )).css('background-color','#666');
-    angular.element(document.querySelector( '#todoListItem' )).css('border-color','#666');
+  $scope.checkOffItem = function(number) {
+    var selector = '#todoListItem' + number;
+
+    angular.element(document.querySelector( selector )).css('background-color','#666');
+    angular.element(document.querySelector( selector )).css('border-color','#666');
   };
   
 });

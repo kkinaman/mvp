@@ -21,8 +21,8 @@
       </form>
 
       <ul class="list-group checked-list-box">
-        <li class="list-group-item todoItem" id='todoListItem' ng-repeat='item in listItems'>
-          <input class='itemCheckbox' type="checkbox" ng-click='checkOffItem(this)'/>{{item}}
+        <li class="list-group-item todoItem" id='todoListItem{{$index}}' ng-repeat='item in listItems'>
+          <input class='itemCheckbox' type="checkbox" ng-click='checkOffItem($index)'/>{{item}}
         </li>
       </ul>
       </div>
