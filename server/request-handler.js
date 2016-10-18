@@ -35,16 +35,25 @@ exports.addDestination = function(req, res) {
 
 //POST to /destination/todo
 exports.addTodo = function(req, res) {
-  Todo.create({text: req.body.text})
+  Todo.findOne({text: req.body.text})
     .then(function(todo) {
-      var todoId = todo._id;
-      DestinationTodo.findOneAndUpdate(
-        {name: req.body.dest},
-        {$push: {todos: todoId}},
-        {safe: true, upsert: true},
-        function(err, dest) {
-          res.status(201).send(dest);
-        }
-      )
+      if (!todo) {
+        Todo.create({text: req.body.text})
+          .then(function(todo) {
+            var todoId = todo._id;
+            DestinationTodo.findOneAndUpdate(
+              {name: req.body.dest},
+              {$push: {todos: todoId}},
+              {safe: true, upsert: true},
+              function(err, dest) {
+                res.status(201).send(dest);
+              }
+            )
+          });
+      }
     });
+
+  
 };
+
+

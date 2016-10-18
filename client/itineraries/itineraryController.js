@@ -13,7 +13,6 @@ angular.module('travelPlannerApp.itinerary', [])
       url: '/destination',
       params: {dest: $scope.destination}
     }).then(function(resp) {
-      console.log('GET RESPONSE', resp);
       $scope.listItems = resp.data.todos.map(function(todo) {
         return todo.text;
       });
@@ -23,7 +22,6 @@ angular.module('travelPlannerApp.itinerary', [])
   fetchTodos();
 
   $scope.addItem = function() {
-    // $scope.listItems.unshift($scope.itineraryItem);
 
     var newTodo = {
       text: $scope.itineraryItem,
