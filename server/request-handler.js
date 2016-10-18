@@ -29,6 +29,11 @@ exports.fetchImages = function(req, res) {
           if (err) {
             throw err;
           }
+          // client.downloads().images().withId(response.images[0].id).execute(
+          //     function(err, resp) {
+          //         if (err) throw err;
+          //         console.log(resp);
+          //     });
           res.status(200).send(response.images);
       });
 };

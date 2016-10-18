@@ -37,12 +37,10 @@ angular.module('travelPlannerApp.itinerary', [])
   fetchImages();
 
   $scope.addItem = function() {
-
     var newTodo = {
       text: $scope.itineraryItem,
       dest: $scope.destination
     };
-
     $http({
       method: 'POST',
       url: '/destination/todo',
@@ -51,8 +49,12 @@ angular.module('travelPlannerApp.itinerary', [])
       fetchTodos();
       return resp;
     });
-
     $scope.itineraryItem = '';
+  };
+
+  $scope.checkOffItem = function(something) {
+    angular.element(document.querySelector( '#todoListItem' )).css('background-color','#666');
+    angular.element(document.querySelector( '#todoListItem' )).css('border-color','#666');
   };
   
 });

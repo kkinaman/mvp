@@ -61,7 +61,7 @@ body {
 ul {
 }
 
-.list-group-item {
+.todoItem {
   background-color: #ddd;
   margin: 10px 0;
   color: #333;

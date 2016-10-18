@@ -1,3 +1,10 @@
+<!-- <script>
+  $('.itemCheckbox').click(function() {
+    console.log('CLICK');
+    $(this).closest('.todoItem').css('background-color', '#ccc');
+  });
+</script> -->
+
 <div class='jumbotron itineraryJumbotron' style="background-image: url({{photos[0]}})"">
   <div class='container'>
     <h1>{{destination}}</h1>
@@ -14,7 +21,9 @@
       </form>
 
       <ul class="list-group checked-list-box">
-        <li class="list-group-item" ng-repeat='item in listItems'><input type="checkbox"/>{{item}}</li>
+        <li class="list-group-item todoItem" id='todoListItem' ng-repeat='item in listItems'>
+          <input class='itemCheckbox' type="checkbox" ng-click='checkOffItem(this)'/>{{item}}
+        </li>
       </ul>
       </div>
       <div class='col-md-6 col-md-offset-1'>
