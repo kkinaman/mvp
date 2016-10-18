@@ -16,6 +16,7 @@
       <ul class="list-group checked-list-box">
         <li class="list-group-item todoItem" id='todoListItem{{$index}}' ng-repeat='item in listItems'>
           <input class='itemCheckbox' type="checkbox" ng-click='checkOffItem($index)'/>{{item.text}}
+          <img src={{item.imageUrl}}/>
           <span class="badge" ng-click='upvote(item)'>{{item.votes}}</span>
         </li>
       </ul>
@@ -26,7 +27,7 @@
           <label for='imageQuery'>Search for {{destination}} and... </label><input type='text' name='imageQuery' ng-model='imagesQuery'/>
           <button type='submit' class='sendQueryButton'>Search</button>
         </form>
-        <img class='featuredPhotos' ng-repeat='photo in photos' src={{photo}}/>
+        <img class='featuredPhotos' ng-repeat='photo in photos' ng-click='addImageItem(photo)' src={{photo}}/>
       </div>
   </div>
 </div>

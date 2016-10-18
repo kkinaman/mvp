@@ -90,5 +90,23 @@ angular.module('travelPlannerApp.itinerary', [])
       })
     });
   }
+
+  $scope.addImageItem = function(photoUrl) {
+    var newImageTodo = {
+      //TODO: allow user to add comment
+      text: '',
+      imageUrl: photoUrl,
+      votes: 0,
+      dest: $scope.destination
+    };
+    $http({
+      method: 'POST',
+      url: '/destination/todo/image',
+      data: newImageTodo
+    }).then(function(resp) {
+      fetchTodos();
+      return resp;
+    });
+  }
   
 });

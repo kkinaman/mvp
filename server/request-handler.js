@@ -73,6 +73,26 @@ exports.addTodo = function(req, res) {
     });
 };
 
+exports.addImageTodo = function(req, res) {
+  Todo.findOne({imageUrl: req.body.imageUrl})
+    .then(function(todo) {
+      if (!todo) {
+        Todo.create({text: req.body.text, imageUrl: req.body.imageUrl, votes: req.body.votes})
+          .then(function(todo) {
+            var todoId = todo._id;
+            DestinationTodo.findOneAndUpdate(
+              {name: req.body.dest},
+              {$push: {todos: todoId}},
+              {safe: true, upsert: true},
+              function(err, dest) {
+                res.status(201).send(dest);
+              }
+            )
+          });
+      }
+    });
+}
+
 //POST to /destination/todo/vote
 exports.updateVotes = function(req, res) {
   Todo.findOneAndUpdate(
