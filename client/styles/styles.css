@@ -17,21 +17,35 @@ body, html {
   color: #ccc;
 }
 
-.searchPageJumbotron {
+.jumbotron {
   margin-top: -20px;
   text-align: center;
+  background-size: cover;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px #666;
+}
+
+.searchPageJumbotron {
   height: 600px;
   background-image: url('https://wallpaperscraft.com/image/new_york_buildings_sky_view_from_above_skyscrapers_38247_2560x1600.jpg');
-  background-size: cover;
   background-position: center 20%;
 }
 
 .searchPageJumbotron h1 {
   padding-top: 200px;
-  color: #fff;
-  font-family: 'Pacifico', cursive;
   letter-spacing: 4px;
   text-shadow: 2px 2px 5px #333;
+}
+
+.itineraryJumbotron, .placesJumbotron {
+  height: 170px;
+  background-image: url('http://genheration.com/wp-content/uploads/2016/04/San-Francisco.jpg');
+  background-position: center center;
 }
 
 .destinationForm {
@@ -42,22 +56,6 @@ body, html {
 
 .submitButton {
   margin-top: 10px;
-}
-
-.itineraryJumbotron {
-  margin-top: -20px;
-  text-align: center;
-  height: 170px;
-  background-image: url('http://genheration.com/wp-content/uploads/2016/04/San-Francisco.jpg');
-  background-size: cover;
-  background-position: center center;
-}
-
-.itineraryJumbotron h1 {
-  color: #fff;
-  font-family: 'Pacifico', cursive;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 5px #666;
 }
 
 .itineraryBody {
@@ -76,11 +74,7 @@ body, html {
   margin-top: 10px;
 }
 
-ul {
-}
-
 .todoItem {
-  // background-color: #ddd;
   margin: 10px 0;
   color: #49433c;
   font-size: 20px;
