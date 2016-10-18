@@ -7,7 +7,6 @@ angular.module('travelPlannerApp.itinerary', [])
   $scope.listItems = [];
 
   var fetchTodos = function() {
-    console.log('LOOKING fOR', $scope.destination);
     $http({
       method: 'GET',
       url: '/destination',

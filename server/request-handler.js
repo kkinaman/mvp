@@ -14,7 +14,6 @@ exports.fetchTodos = function(req, res) {
   DestinationTodo.findOne({name: req.query.dest})
     .populate('todos')
     .exec(function(err, dest) {
-      console.log(dest.todos);
       res.status(200).send(dest);
     });
 };

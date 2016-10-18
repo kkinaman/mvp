@@ -9,7 +9,6 @@ angular.module('travelPlannerApp.search', [])
   // };
 
   $scope.setDestination = function() {
-    console.log($scope.destination);
     newDestinationFactory.setDest($scope.destination);
 
 // TODO: fill these fields in
