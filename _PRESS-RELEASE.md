@@ -1,4 +1,4 @@
-# Are we there yet? #
+# wanderList #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -16,26 +16,26 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Stress less, travel more ##
+## Chase your travel dreams ##
 
 ## For those seeking travel inspiration, wanderlust-ful organization, or dreaming of their next vacation. ##
 
-## Are we there yet? provides a clean platform for saving travel plans ahead of time. Browse related photos of your destination, create an itinerary, and spend more time seeing the sights with your travel plans conveniently saved on the web.  ##
+## wanderList provides a clean platform for saving travel plans ahead of time. Browse related photos of your destination, create an itinerary, and spend more time seeing the sights with your travel plans conveniently saved on the web.  ##
 
 ## Problem ##
-  > Traveling should be about seeing and experiencing a new environment and culture, not sifting through pamphlets and guides.
+  > You're talking with someone, flipping through a magazing, or browsing the web and you come across something you just have to do when you travel to _______. But between memos on your phone, mental notes, and written lists, how many of these ideas get lost?
 
 ## Solution ##
-  > Are we there yet? makes planning your travels fun and simple.
+  > wanderList is your solution. Log all your travel ideas in one application, accessible from a computer or any smart device.
 
 ## Quote from You ##
-  > "Gone are the days of Lonely Planet guide books, post-its, and folders of print-outs. With our technology you have all your ideas and plans at your tips. "
+  > "Gone are the days of guide books, post-its, and folders full of print-outs. With our technology you have all your ideas and plans at your fingertips. "
 
 ## How to Get Started ##
   > Create an account, plug in your destination, and start planning!
 
 ## Customer Quote ##
-  > "Planning our next family vacation usually gives me a headache, trying to keep track of everything we want to do. Now, all our plans are available at our fingertips with the Are we there yet? app."
+  > "Coordinating travel plans with friends has always been a headache, but with wanderList's collaboration feature, everyone's voice can be heard.'"
 
 ## Closing and Call to Action ##
   > Been thinking about a vacation? Visit our website and start browsing. We're sure you'll find inspiraton.
