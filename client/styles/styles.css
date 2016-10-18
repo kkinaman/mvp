@@ -52,8 +52,13 @@ body, html {
 
 .itineraryJumbotron, .placesJumbotron {
   height: 170px;
-  background-image: url('http://genheration.com/wp-content/uploads/2016/04/San-Francisco.jpg');
+  background-image: url('https://wallpaperscraft.com/image/new_york_buildings_sky_view_from_above_skyscrapers_38247_2560x1600.jpg');
   background-position: center center;
+  // background-color: #DCD0C0;
+}
+
+.placesJumbotron h1 {
+  text-shadow: 2px 2px 5px #333;
 }
 
 .destinationForm {
@@ -129,16 +134,25 @@ input[type='checkbox'] {
 
 .placesBody {
   text-align: center;
-  font-size: 24px;
+  font-size: 35px;
 }
 
 #places {
   display: inline-block;
-  width: 300px;
-  height: 100px;
-  line-height: 80px;
+  width: 400px;
+  height: 120px;
+  line-height: 100px;
   margin: 20px 25px;
   border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  border: none;
+}
+
+.placename {
+  background-color: #fff;
+  opacity: 0.7;
+  padding: 10px 40px;
 }
 
 
