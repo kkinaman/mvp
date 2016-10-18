@@ -101,7 +101,7 @@ input[type='checkbox'] {
   margin-right: 10px;
 }
 
-.featuredPhotos {
+.featuredImages {
   padding: 5px;
 }
 
@@ -132,8 +132,13 @@ input[type='checkbox'] {
   font-size: 24px;
 }
 
-.places {
+#places {
   display: inline-block;
   width: 300px;
-  margin: 20px;
+  height: 100px;
+  line-height: 80px;
+  margin: 20px 25px;
+  border-radius: 5px;
 }
+
+

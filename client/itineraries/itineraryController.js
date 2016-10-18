@@ -6,8 +6,7 @@ angular.module('travelPlannerApp.itinerary', [])
   $scope.destination = newDestinationFactory.getDest();
 
   $scope.listItems = [];
-  $scope.featuredPhoto = '';
-  $scope.photos = [];
+  $scope.images = [];
 
   var fetchTodos = function() {
     $http({
@@ -24,19 +23,30 @@ angular.module('travelPlannerApp.itinerary', [])
   var fetchImages = function() {
     $http({
       method: 'GET',
-      url: '/destination/photos',
+      url: '/destination/images',
       params: {
         dest: $scope.destination,
         query: 'landscape'
       }
     }).then(function(resp) {
-      $scope.photos = resp.data.map(function(image) {
+      $scope.images = resp.data.map(function(image) {
         return image.display_sizes[0].uri;
-      })
+      });
     });
   }
 
   fetchImages();
+
+  var updateDestPhoto = function() {
+    $http({
+      method: 'POST',
+      url: '/destination/images',
+      params: {
+        dest: $scope.destination,
+        query: 'landscape'
+      }
+    })
+  };
 
   $scope.addItem = function() {
     var newTodo = {
@@ -80,13 +90,13 @@ angular.module('travelPlannerApp.itinerary', [])
   $scope.submitQuery = function() {
     $http({
       method: 'GET',
-      url: '/destination/photos',
+      url: '/destination/images',
       params: {
         dest: $scope.destination,
         query: $scope.imagesQuery
       }
     }).then(function(resp) {
-      $scope.photos = resp.data.map(function(image) {
+      $scope.images = resp.data.map(function(image) {
         return image.display_sizes[0].uri;
       })
     });
