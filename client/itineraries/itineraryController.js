@@ -110,7 +110,6 @@ angular.module('travelPlannerApp.itinerary', [])
   }
 
   $scope.removeItem = function(item) {
-    console.log('DOUBLE CLICK');
     $http({
       method: 'POST',
       url: '/destination/todo/remove',
