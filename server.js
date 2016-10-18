@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // app.get('/login', ??);
 // app.post('/login', handler.signIn);
 
-// app.get('/destination', handler.fetchTodos)
+app.get('/destination', handler.fetchTodos)
 app.post('/destination', handler.addDestination);
 
 app.post('/destination/todo', handler.addTodo);

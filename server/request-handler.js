@@ -8,9 +8,16 @@ var Todo = db.todoModel;
 //   // Sign in existing user
 // }
 
+//GET to /destination
 exports.fetchTodos = function(req, res) {
-  //fetch list of todos from destination
-}
+  //TODO: should find the dest record specific to a user
+  DestinationTodo.findOne({name: req.query.dest})
+    .populate('todos')
+    .exec(function(err, dest) {
+      console.log(dest.todos);
+      res.status(200).send(dest);
+    });
+};
 
 //POST to /destination
 exports.addDestination = function(req, res) {
