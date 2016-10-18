@@ -1,6 +1,7 @@
 angular.module('travelPlannerApp', [
   'travelPlannerApp.search',
   'travelPlannerApp.itinerary',
+  'travelPlannerApp.places',
   'ngRoute'
   ])
 
@@ -13,6 +14,10 @@ angular.module('travelPlannerApp', [
     .when('/destination/:dest', {
       templateUrl: 'itineraries/itinerary.html',
       controller: 'ItineraryController'
+    })
+    .when('/places', {
+      templateUrl: 'places/places.html',
+      controller: 'PlacesController'
     });
 })
 
