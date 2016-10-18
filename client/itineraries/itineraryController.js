@@ -14,9 +14,7 @@ angular.module('travelPlannerApp.itinerary', [])
       url: '/destination',
       params: {dest: $scope.destination}
     }).then(function(resp) {
-      $scope.listItems = resp.data.todos.map(function(todo) {
-        return todo.text;
-      });
+      $scope.listItems = resp.data.todos;
     });
   }
 
@@ -42,7 +40,8 @@ angular.module('travelPlannerApp.itinerary', [])
   $scope.addItem = function() {
     var newTodo = {
       text: $scope.itineraryItem,
-      dest: $scope.destination
+      dest: $scope.destination,
+      votes: 0
     };
     $http({
       method: 'POST',

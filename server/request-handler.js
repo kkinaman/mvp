@@ -57,7 +57,7 @@ exports.addTodo = function(req, res) {
   Todo.findOne({text: req.body.text})
     .then(function(todo) {
       if (!todo) {
-        Todo.create({text: req.body.text})
+        Todo.create({text: req.body.text, votes: req.body.votes})
           .then(function(todo) {
             var todoId = todo._id;
             DestinationTodo.findOneAndUpdate(

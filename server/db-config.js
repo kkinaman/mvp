@@ -29,7 +29,8 @@ var destinationTodosSchema = new Schema({
 
 var todoSchema = new Schema({
   text: String,
-  imageUrl: String
+  imageUrl: String,
+  votes: Number
 });
 
 exports.userModel = mongoose.model('User', userSchema);
