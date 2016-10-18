@@ -86,6 +86,11 @@ ul {
   font-size: 20px;
 }
 
+.todoItem span {
+  font-size: 20px;
+  border-radius: 20px;
+}
+
 input[type='checkbox'] {
   margin-right: 10px;
 }
