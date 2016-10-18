@@ -6,8 +6,10 @@
 
   <div class='container placesBody'>
     <ul class="list-group">
-      <li class='list-group-item' id='places' ng-repeat='place in places' style="background-image: url({{place.imageUrl}})">
-        <span class='placename' >{{place.name}}</span>
-      </li>
+      <a ng-repeat='place in places' href='#/destination/{{place.name}}'>
+        <li class='list-group-item' id='places' style="background-image: url({{place.imageUrl}})">
+          <span class='placename' >{{place.name}}</span>
+        </li>
+      </a>
     </ul>
   </div>
