@@ -57,7 +57,7 @@ exports.addDestination = function(req, res) {
   DestinationTodo.findOne({name: req.body.name})
     .then(function(dest) {
       if (!dest) {
-        DestinationTodo.create({name: req.body.name})
+        DestinationTodo.create({name: req.body.name, imageUrl: ''})
           .then(function(dest) {
             res.status(201).send(dest);
           });
@@ -122,7 +122,20 @@ exports.updateVotes = function(req, res) {
     {_id: req.body.id}, 
     {votes: req.body.votes},
     {safe: true, upsert: true},
+    function(err, todo) {
+      res.status(201).send(todo);
+    }
+  );
+};
+
+exports.updateDestPhoto = function(req, res) {
+  // console.log('body', req.body);
+  DestinationTodo.findOneAndUpdate(
+    {name: req.body.dest},
+    {imageUrl: req.body.imageUrl},
+    {safe: true, upsert: true},
     function(err, dest) {
+      // console.log(dest);
       res.status(201).send(dest);
     }
   );

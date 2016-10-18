@@ -1,4 +1,4 @@
-<div class='jumbotron itineraryJumbotron' style="background-image: url({{images[0]}})">
+<div class='jumbotron itineraryJumbotron' style="background-image: url({{featuredImage})">
   <div class='container'>
     <h1>{{destination}}</h1>
   </div>
@@ -27,7 +27,7 @@
           <label for='imageQuery'>Search for {{destination}} and... </label><input type='text' name='imageQuery' ng-model='imagesQuery'/>
           <button type='submit' class='sendQueryButton'>Search</button>
         </form>
-        <img class='featuredImages' ng-repeat='image in images' ng-click='addImageItem(image)' src={{image}}/>
+        <img class='featuredPhotos' ng-repeat='image in images' ng-click='addImageItem(image)' src={{image}}/>
       </div>
   </div>
 </div>

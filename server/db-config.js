@@ -21,6 +21,7 @@ var destinationTodosSchema = new Schema({
     ref: 'User'
   },
   name: String,
+  imageUrl: String,
   todos: [{
     type: Schema.Types.ObjectId,
     ref: 'Todo'

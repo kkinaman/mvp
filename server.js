@@ -20,6 +20,8 @@ app.get('/destination/images', handler.fetchImages);
 
 app.post('/destination/todo', handler.addTodo);
 
+app.post('/destination/photo', handler.updateDestPhoto);
+
 app.post('/destination/todo/vote', handler.updateVotes);
 
 app.post('/destination/todo/image', handler.addImageTodo);
