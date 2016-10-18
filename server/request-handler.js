@@ -44,6 +44,14 @@ exports.fetchImages = function(req, res) {
       });
 };
 
+//GET to /places
+exports.fetchPlaces = function(req, res) {
+  DestinationTodo.where('todos').ne([ ])
+    .then(function(places) {
+      res.status(201).send(places);
+    });
+};
+
 //POST to /destination
 exports.addDestination = function(req, res) {
   DestinationTodo.findOne({name: req.body.name})
@@ -119,5 +127,6 @@ exports.updateVotes = function(req, res) {
     }
   );
 };
+
 
 

@@ -26,6 +26,8 @@ app.post('/destination/todo/image', handler.addImageTodo);
 
 app.post('/destination/todo/remove', handler.removeTodo);
 
+app.get('/places', handler.fetchPlaces);
+
 app.listen(3000, function() {
   console.log('Listening on port 3000');
 });
