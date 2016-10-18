@@ -25,6 +25,9 @@ body, html {
 .searchPageJumbotron h1 {
   padding-top: 200px;
   color: #fff;
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 5px #333;
 }
 
 .destinationForm {
