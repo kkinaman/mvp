@@ -5,7 +5,13 @@ var DestinationTodo = db.destinationTodoModel;
 var Todo = db.todoModel;
 
 var gettyApi = require('gettyimages-api');
-var creds = { apiKey: "m9yxsry2sgy7g3f26xzjja7c", apiSecret: "YJGJbDQtqkWHxayNmjJzg3zQt8wrctZerRGKC3ZMz5SZr", username: "kkinaman", password: "password123" };
+var gettyKeys = require('../client/env/config.js');
+var creds = {
+  apiKey: gettyKeys.apiKey,
+  apiSecret: gettyKeys.apiSecret,
+  username: gettyKeys.gettyUsername,
+  password: gettyKeys.gettyPassword
+};
 var client = new gettyApi(creds);
 
 // exports.signIn = function(req, res) {

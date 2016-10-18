@@ -26,7 +26,7 @@ angular.module('travelPlannerApp.itinerary', [])
       url: '/destination/photos',
       params: {
         dest: $scope.destination,
-        query: 'attraction'
+        query: 'landscape'
       }
     }).then(function(resp) {
       $scope.photos = resp.data.map(function(image) {
