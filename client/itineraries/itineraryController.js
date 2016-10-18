@@ -1,7 +1,18 @@
 angular.module('travelPlannerApp.itinerary', [])
 
-.controller('ItineraryController', function($scope, $http, newDestinationFactory) {
+.controller('ItineraryController', function($scope, $http, newDestinationFactory, $routeParams) {
 
+  var capitalizeWords= function(string) {
+    if (string.split(' ')) {
+      return string.split(' ').map(function(word) {
+          var chars = word.toLowerCase().split('');
+          chars[0] = chars[0].toUpperCase();
+          return chars.join('');
+        }).join(' ');
+    }
+  };
+
+  newDestinationFactory.setDest(capitalizeWords($routeParams.dest));
   $scope.destination = newDestinationFactory.getDest();
 
   $scope.listItems = [];

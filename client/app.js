@@ -10,7 +10,7 @@ angular.module('travelPlannerApp', [
       templateUrl: 'searchPage/searchPage.html',
       controller: 'SearchPageController'
     })
-    .when('/destination', {
+    .when('/destination/:dest', {
       templateUrl: 'itineraries/itinerary.html',
       controller: 'ItineraryController'
     });
