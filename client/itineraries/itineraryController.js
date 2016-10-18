@@ -5,6 +5,8 @@ angular.module('travelPlannerApp.itinerary', [])
   $scope.destination = newDestinationFactory.getDest();
 
   $scope.listItems = [];
+  $scope.featuredPhoto = '';
+  $scope.photos = [];
 
   var fetchTodos = function() {
     $http({
@@ -19,6 +21,20 @@ angular.module('travelPlannerApp.itinerary', [])
   }
 
   fetchTodos();
+
+  var fetchImages = function() {
+    $http({
+      method: 'GET',
+      url: '/destination/photos',
+      params: {dest: $scope.destination}
+    }).then(function(resp) {
+      $scope.photos = resp.data.map(function(image) {
+        return image.display_sizes[0].uri;
+      })
+    });
+  }
+
+  fetchImages();
 
   $scope.addItem = function() {
 

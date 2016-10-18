@@ -4,6 +4,10 @@ var User = db.userModel;
 var DestinationTodo = db.destinationTodoModel;
 var Todo = db.todoModel;
 
+var gettyApi = require('gettyimages-api');
+var creds = { apiKey: "m9yxsry2sgy7g3f26xzjja7c", apiSecret: "YJGJbDQtqkWHxayNmjJzg3zQt8wrctZerRGKC3ZMz5SZr", username: "kkinaman", password: "password123" };
+var client = new gettyApi(creds);
+
 // exports.signIn = function(req, res) {
 //   // Sign in existing user
 // }
@@ -16,6 +20,17 @@ exports.fetchTodos = function(req, res) {
     .exec(function(err, dest) {
       res.status(200).send(dest);
     });
+};
+
+//GET to /destination/photos
+exports.fetchImages = function(req, res) {
+  client.search().images().withPage(1).withPageSize(9).withPhrase(req.query.dest + ' attraction')
+      .execute(function(err, response) {
+          if (err) {
+            throw err;
+          }
+          res.status(200).send(response.images);
+      });
 };
 
 //POST to /destination

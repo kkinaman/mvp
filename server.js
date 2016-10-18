@@ -16,6 +16,8 @@ app.use(bodyParser.json());
 app.get('/destination', handler.fetchTodos)
 app.post('/destination', handler.addDestination);
 
+app.get('/destination/photos', handler.fetchImages);
+
 app.post('/destination/todo', handler.addTodo);
 
 app.listen(3000, function() {
