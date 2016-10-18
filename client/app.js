@@ -25,6 +25,15 @@ angular.module('travelPlannerApp', [
     },
     setDest: function(dest) {
       destination = dest;
+    },
+    capitalizeWords: function(string) {
+      if (string.split(' ')) {
+        return string.split(' ').map(function(word) {
+            var chars = word.toLowerCase().split('');
+            chars[0] = chars[0].toUpperCase();
+            return chars.join('');
+          }).join(' ');
+      }
     }
   }
 });
