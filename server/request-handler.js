@@ -73,6 +73,7 @@ exports.addTodo = function(req, res) {
     });
 };
 
+//POST to /destination/todo/image
 exports.addImageTodo = function(req, res) {
   Todo.findOne({imageUrl: req.body.imageUrl})
     .then(function(todo) {
@@ -91,7 +92,15 @@ exports.addImageTodo = function(req, res) {
           });
       }
     });
-}
+};
+
+//POST to /destination/todo/remove
+exports.removeTodo = function(req, res) {
+  Todo.remove({_id: req.body._id})
+    .then(function(){
+      res.status(201).send();
+    });
+};
 
 //POST to /destination/todo/vote
 exports.updateVotes = function(req, res) {

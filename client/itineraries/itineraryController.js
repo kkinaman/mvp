@@ -108,5 +108,17 @@ angular.module('travelPlannerApp.itinerary', [])
       return resp;
     });
   }
+
+  $scope.removeItem = function(item) {
+    console.log('DOUBLE CLICK');
+    $http({
+      method: 'POST',
+      url: '/destination/todo/remove',
+      data: item
+    }).then(function(resp) {
+      fetchTodos();
+      return resp;
+    });
+  }
   
 });

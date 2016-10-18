@@ -24,6 +24,8 @@ app.post('/destination/todo/vote', handler.updateVotes);
 
 app.post('/destination/todo/image', handler.addImageTodo);
 
+app.post('/destination/todo/remove', handler.removeTodo);
+
 app.listen(3000, function() {
   console.log('Listening on port 3000');
 });
