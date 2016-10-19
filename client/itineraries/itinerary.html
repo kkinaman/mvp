@@ -16,8 +16,10 @@
       <ul class="list-group checked-list-box">
         <li class="list-group-item todoItem" id='todoListItem{{$index}}' ng-repeat='item in listItems | orderBy:"votes":true '' ng-dblclick='removeItem(item)'>
           <input class='itemCheckbox' type="checkbox" ng-click='checkOffItem($index)'/>{{item.text}}
-          <img src={{item.imageUrl}}/>
           <span class="badge" ng-click='upvote(item)'>{{item.votes}}</span>
+          <div class='listItemImage'>
+            <img src={{item.imageUrl}}/>
+          </div>
         </li>
       </ul>
       </div>

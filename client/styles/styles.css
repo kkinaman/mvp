@@ -101,6 +101,14 @@ body, html {
   font-weight: 700;
 }
 
+.todoItem img {
+  width: 50%;
+}
+
+.listItemImage {
+  text-align: center;
+}
+
 input[type='checkbox'] {
   margin-right: 10px;
 }
