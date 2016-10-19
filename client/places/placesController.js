@@ -6,7 +6,6 @@ angular.module('travelPlannerApp.places', [])
     method: 'GET',
     url: '/places'
   }).then(function(resp) {
-    console.log(resp.data);
     $scope.places = resp.data;
   });
 });

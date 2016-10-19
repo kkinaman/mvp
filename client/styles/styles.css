@@ -53,8 +53,7 @@ body, html {
 .itineraryJumbotron, .placesJumbotron {
   height: 170px;
   background-image: url('https://wallpaperscraft.com/image/new_york_buildings_sky_view_from_above_skyscrapers_38247_2560x1600.jpg');
-  background-position: center center;
-  // background-color: #DCD0C0;
+  background-position: center 40%;
 }
 
 .placesJumbotron h1 {

@@ -16,7 +16,6 @@ angular.module('travelPlannerApp.itinerary', [])
       params: {dest: $scope.destination}
     }).then(function(resp) {
       $scope.listItems = resp.data.todos;
-      // fetchImages();
     });
   }
 
@@ -30,21 +29,16 @@ angular.module('travelPlannerApp.itinerary', [])
         query: 'landscape'
       }
     }).then(function(resp) {
-      // $scope.featuredImage = resp.data[0].display_sizes[0].uri;
       $scope.images = resp.data.map(function(image) {
         return image.display_sizes[0].uri;
       });
-      // console.log($scope.images[0]);
       $scope.featuredImage = $scope.images[0];
-      // console.log($scope.featuredImage);
       $('.itineraryJumbotron').css('background-image', 'url(' + $scope.featuredImage + ')');
       updateDestPhoto($scope.destination, $scope.images[0]);
     });
   };
 
   var updateDestPhoto = function(destination, imageUrl) {
-    // console.log('updating feat photo', imageUrl);
-
     $http({
       method: 'POST',
       url: '/destination/photo',
@@ -53,7 +47,6 @@ angular.module('travelPlannerApp.itinerary', [])
         imageUrl: imageUrl
       }
     }).then(function(resp) {
-      // console.log(resp);
       return resp;
     })
   };
@@ -80,7 +73,6 @@ angular.module('travelPlannerApp.itinerary', [])
 
   $scope.checkOffItem = function(index) {
     var selector = '#todoListItem' + index;
-
     angular.element(document.querySelector( selector )).css('background-color','#666');
     angular.element(document.querySelector( selector )).css('border-color','#666');
   };

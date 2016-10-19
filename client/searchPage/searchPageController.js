@@ -5,7 +5,6 @@ angular.module('travelPlannerApp.search', [])
   
 
   $scope.setDestination = function() {
-    // newDestinationFactory.setDest(capitalizeWords($scope.destination));
 // TODO: fill the creator field in
     var newDestination = {
       // creator: 'user',
