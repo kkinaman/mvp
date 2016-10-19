@@ -108,9 +108,10 @@ angular.module('travelPlannerApp.itinerary', [])
   }
 
   $scope.addImageItem = function(photoUrl) {
+    var comment = $window.prompt('Add comment to photo: ');
     var newImageTodo = {
       //TODO: allow user to add comment
-      text: '',
+      text: comment,
       imageUrl: photoUrl,
       votes: 0,
       dest: $scope.destination
