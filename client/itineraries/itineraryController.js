@@ -106,13 +106,21 @@ angular.module('travelPlannerApp.itinerary', [])
       })
     });
   }
+  $scope.clickedImage = '';
 
-  $scope.addImageItem = function(photoUrl) {
-    var comment = $window.prompt('Add comment to photo: ');
+  $scope.promptComment = function(photoUrl) {
+    $scope.clickedImage = photoUrl;
+    $('#addCommentModal').modal('toggle');
+  }
+
+  $scope.addImageItem = function() {
+    // var comment = $window.prompt('Add comment to photo: ');
+    $('#addCommentModal').modal('toggle');
+    var comment = $scope.imageComment;
     var newImageTodo = {
       //TODO: allow user to add comment
       text: comment,
-      imageUrl: photoUrl,
+      imageUrl: $scope.clickedImage,
       votes: 0,
       dest: $scope.destination
     };
@@ -127,6 +135,7 @@ angular.module('travelPlannerApp.itinerary', [])
   }
 
   $scope.removeItem = function(item) {
+    // $('#removeItemModal').modal('toggle');
     var confirmed = $window.confirm('Delete?');
     if (confirmed) {
       $http({
