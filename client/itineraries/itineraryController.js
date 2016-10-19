@@ -1,6 +1,6 @@
 angular.module('travelPlannerApp.itinerary', [])
 
-.controller('ItineraryController', function($scope, $http, newDestinationFactory, $routeParams) {
+.controller('ItineraryController', function($scope, $http, $window, newDestinationFactory, $routeParams) {
 
   newDestinationFactory.setDest(newDestinationFactory.capitalizeWords($routeParams.dest));
   $scope.destination = newDestinationFactory.getDest();
@@ -126,14 +126,17 @@ angular.module('travelPlannerApp.itinerary', [])
   }
 
   $scope.removeItem = function(item) {
-    $http({
-      method: 'POST',
-      url: '/destination/todo/remove',
-      data: item
-    }).then(function(resp) {
-      fetchTodos();
-      return resp;
-    });
+    var confirmed = $window.confirm('Delete?');
+    if (confirmed) {
+      $http({
+        method: 'POST',
+        url: '/destination/todo/remove',
+        data: item
+      }).then(function(resp) {
+        fetchTodos();
+        return resp;
+      });
+    }
   }
   
 });
