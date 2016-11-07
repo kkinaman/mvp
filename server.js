@@ -30,6 +30,7 @@ app.post('/destination/todo/remove', handler.removeTodo);
 
 app.get('/places', handler.fetchPlaces);
 
-app.listen(3000, function() {
-  console.log('Listening on port 3000');
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
