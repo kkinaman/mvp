@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+// mongoose.connect('mongodb://localhost:27017/travelPlannerDB');
 mongoose.connect('mongodb://admin:admin@ds147377.mlab.com:47377/heroku_g3q08x35');
 
 var db = mongoose.connection;
