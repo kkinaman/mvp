@@ -6,10 +6,10 @@ var Todo = db.todoModel;
 
 var gettyApi = require('gettyimages-api');
 var creds = {
-  apiKey: ENV[API_KEY],
-  apiSecret: ENV[API_SECRET],
-  username: ENV[GETTY_U],
-  password: ENV[GETTY_P]
+  apiKey: process.env.API_KEY,
+  apiSecret: process.env.API_SECRET,
+  username: process.env.GETTY_U,
+  password: process.env.GETTY_P
 };
 var client = new gettyApi(creds);
 
